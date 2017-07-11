@@ -1,0 +1,7 @@
+<h1 style="text-align:center;color:slategray">User Component</h1>
+{{ users | json }}
+<app-user-new (createNewUserEvent)="create($event)"></app-user-new>
+<app-user-list 
+[users]="users" 
+(deleteUserEvent)="delete($event)"
+(updateUserEvent)="update($event)"></app-user-list>
